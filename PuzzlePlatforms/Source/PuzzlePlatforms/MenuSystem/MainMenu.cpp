@@ -5,6 +5,11 @@
 #include "Components/Button.h"
 
 
+void UMainMenu::SetMenuInterface(IMenuInterface* MenuInterface)
+{
+	this->MenuInterface = MenuInterface;
+}
+
 bool UMainMenu::Initialize()
 {
 	bool bSuccess = Super::Initialize();
