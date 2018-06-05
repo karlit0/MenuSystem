@@ -8,6 +8,7 @@
 #include "PuzzlePlatformsGameInstance.generated.h"
 
 class UUserWidget;
+class UMainMenu;
 
 /**
  * 
@@ -33,5 +34,7 @@ public:
 
 private:
 	TSubclassOf<UUserWidget> MenuClass;
+
+	UMainMenu* Menu;
 
 };
