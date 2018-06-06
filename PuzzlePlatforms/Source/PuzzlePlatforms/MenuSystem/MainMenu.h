@@ -3,8 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
-#include "MenuInterface.h"
+#include "MenuWidget.h"
 #include "MainMenu.generated.h"
 
 class UButton;
@@ -15,16 +14,9 @@ class UEditableTextBox;
  * 
  */
 UCLASS()
-class PUZZLEPLATFORMS_API UMainMenu : public UUserWidget
+class PUZZLEPLATFORMS_API UMainMenu : public UMenuWidget
 {
 	GENERATED_BODY()
-
-public:
-	void SetMenuInterface(IMenuInterface* MenuInterface);
-
-	void Setup();
-	// better option would be implementing virtual void OnLevelRemovedFromWorld(ULevel* InLevel, UWorld* InWorld);
-	void Teardown();
 
 protected:
 	virtual bool Initialize() override;
@@ -66,5 +58,4 @@ private:
 	UFUNCTION()
 	void OpenMainMenu();
 	
-	IMenuInterface* MenuInterface;
 };
