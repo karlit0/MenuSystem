@@ -29,6 +29,9 @@ private:
 	UButton* JoinButton;
 
 	UPROPERTY(meta = (BindWidget))
+	UButton* QuitButton;
+
+	UPROPERTY(meta = (BindWidget))
 	UButton* CancelJoinMenuButton;
 
 	UPROPERTY(meta = (BindWidget))
@@ -58,4 +61,6 @@ private:
 	UFUNCTION()
 	void OpenMainMenu();
 	
+	UFUNCTION()
+	void QuitPressed();
 };
